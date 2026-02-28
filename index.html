@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upload Video</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Upload Video</h1>
+    <div class="connect-buttons">
+        <a href="api/youtube_auth.php"><button style="background:#FF0000;">Connect YouTube</button></a>
+        <a href="api/instagram_auth.php"><button style="background:#C13584;">Connect Instagram</button></a>
+        <a href="api/facebook_auth.php"><button style="background:#1877F2;">Connect Facebook</button></a>
+        <a href="api/tiktok_auth.php"><button style="background:#000;color:white;">Connect TikTok</button></a>
+    </div>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label>Video:</label><br>
+        <input type="file" name="video" required><br><br>
+        <label>Caption:</label><br>
+        <input type="text" name="caption" required><br><br>
+        <label>Platforms:</label><br>
+        <input type="checkbox" name="platforms[]" value="youtube"> YouTube
+        <input type="checkbox" name="platforms[]" value="instagram"> Instagram
+        <input type="checkbox" name="platforms[]" value="facebook"> Facebook
+        <input type="checkbox" name="platforms[]" value="tiktok"> TikTok<br><br>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="status"></div>
+</div>
+<script src="upload.js"></script>
+</body>
+</html>
