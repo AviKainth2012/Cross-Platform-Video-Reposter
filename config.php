@@ -1,11 +1,13 @@
 <?php
-if(function_exists('apache_getenv')){
-    putenv("DB_HOST=".apache_getenv('DB_HOST'));
-    putenv("DB_NAME=".apache_getenv('DB_NAME'));
-    putenv("DB_USER=".apache_getenv('DB_USER'));
-    putenv("DB_PASS=".apache_getenv('DB_PASS'));
-}
+session_start();
+
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
 
 $conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) die("DB connection failed: " . $conn->connect_error);
-?>
+if($conn->connect_error) die("DB connection failed: " . $conn->connect_error);
+
+$yt_id = getenv('YOUTUBE_CLIENT_ID');
+$yt_secret = getenv('YOUTUBE_CLIENT_SECRET');
