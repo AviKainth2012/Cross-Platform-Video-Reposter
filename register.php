@@ -27,7 +27,7 @@ if(isset($_SESSION['user_id'])){
 const registerForm = document.getElementById("registerForm");
 registerForm.addEventListener("submit", async e=>{
     e.preventDefault();
-    const res = await fetch("api/register_user.php", {
+    const res = await fetch("api/register.php", {
         method:"POST",
         headers:{"Content-Type":"application/x-www-form-urlencoded"},
         body:`email=${encodeURIComponent(document.getElementById("email").value)}&password=${encodeURIComponent(document.getElementById("password").value)}`
