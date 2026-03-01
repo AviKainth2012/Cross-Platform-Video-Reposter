@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require __DIR__ . '/../config.php';
 session_start();
 
 $client_key = getenv('TIKTOK_CLIENT_KEY');

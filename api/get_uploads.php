@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require __DIR__ . '/../config.php';
 if(!isset($_SESSION['user_id'])){
     http_response_code(403);
     die("Login required");

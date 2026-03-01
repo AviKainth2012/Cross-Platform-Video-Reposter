@@ -1,6 +1,5 @@
 <?php
-require '../config.php';
-
+require __DIR__ . '/../config.php';
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 

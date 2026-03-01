@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require __DIR__ . '/../config.php';
 session_start();
 
 $client_id = getenv('INSTAGRAM_CLIENT_ID');

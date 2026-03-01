@@ -1,6 +1,5 @@
 <?php
-require '../config.php';
-
+require __DIR__ . '/../config.php';
 $dir = "../uploads/";
 $files = scandir($dir);
 $now = time();

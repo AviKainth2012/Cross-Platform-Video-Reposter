@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require __DIR__ . '/../config.php';
 
 $posts = $conn->query("SELECT * FROM posts WHERE status='pending'");
 while($post = $posts->fetch_assoc()){

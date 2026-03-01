@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require __DIR__ . '/../config.php';
 session_start();
 
 $app_id = getenv('FACEBOOK_APP_ID');
