@@ -33,7 +33,7 @@ registerForm.addEventListener("submit", async e=>{
         body:`email=${encodeURIComponent(document.getElementById("email").value)}&password=${encodeURIComponent(document.getElementById("password").value)}`
     });
     const text = await res.text();
-    document.getElementById("status").textContent = text==="success" ? "Registered! Login now." : "Error registering";
+    document.getElementById("status").textContent = text==="success" ? "Registered! Login now." : text;
 });
 </script>
 </body>
