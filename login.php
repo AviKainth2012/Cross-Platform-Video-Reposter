@@ -27,7 +27,7 @@ if(isset($_SESSION['user_id'])){
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", async e=>{
     e.preventDefault();
-    const res = await fetch("api/login_user.php", {
+    const res = await fetch("api/login.php", {
         method:"POST",
         headers:{"Content-Type":"application/x-www-form-urlencoded"},
         body:`email=${encodeURIComponent(document.getElementById("email").value)}&password=${encodeURIComponent(document.getElementById("password").value)}`

@@ -1,13 +1,15 @@
 <?php
 session_start();
 
-$host = getenv('DB_HOST');
-$db   = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
+$host = "";           // usually 'localhost' on IONOS
+$db   = "";  // EXACT name of your DB
+$user = "";  // EXACT MySQL user
+$pass = ""; // MySQL password
 
 $conn = new mysqli($host, $user, $pass, $db);
-if($conn->connect_error) die("DB connection failed: " . $conn->connect_error);
-
-$yt_id = getenv('YOUTUBE_CLIENT_ID');
-$yt_secret = getenv('YOUTUBE_CLIENT_SECRET');
+if($conn->connect_error){
+    die("DB connection failed: " . $conn->connect_error);
+} else {
+    echo "DB connected successfully"; // temporary
+}
+?>
